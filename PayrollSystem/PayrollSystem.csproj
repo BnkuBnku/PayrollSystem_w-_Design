@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A5B8D49B-7B92-4F7F-998F-F4CAB4AF6151}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PayrollSystem</RootNamespace>
+    <AssemblyName>PayrollSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_form.Designer.cs">
+      <DependentUpon>Admin_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee.cs" />
+    <Compile Include="Connection.cs" />
+    <Compile Include="E_employeeList_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="E_employeeList_form.Designer.cs">
+      <DependentUpon>E_employeeList_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="E_addemployee_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="E_addemployee_form.Designer.cs">
+      <DependentUpon>E_addemployee_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="E_updateEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="E_updateEmployee.Designer.cs">
+      <DependentUpon>E_updateEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DateTimeRecord_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DateTimeRecord_form.Designer.cs">
+      <DependentUpon>DateTimeRecord_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Delete_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Delete_form.Designer.cs">
+      <DependentUpon>Delete_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login_form.Designer.cs">
+      <DependentUpon>Login_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="payrollsystemDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>payrollsystemDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="P_addPayroll_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P_addPayroll_form.Designer.cs">
+      <DependentUpon>P_addPayroll_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DTR_search_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DTR_search_form.Designer.cs">
+      <DependentUpon>DTR_search_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P_employeeList_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P_employeeList_form.Designer.cs">
+      <DependentUpon>P_employeeList_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Payroll_report_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payroll_report_form.Designer.cs">
+      <DependentUpon>Payroll_report_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Admin_form.resx">
+      <DependentUpon>Admin_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="E_employeeList_form.resx">
+      <DependentUpon>E_employeeList_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="E_addemployee_form.resx">
+      <DependentUpon>E_addemployee_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="E_updateEmployee.resx">
+      <DependentUpon>E_updateEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DateTimeRecord_form.resx">
+      <DependentUpon>DateTimeRecord_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Delete_form.resx">
+      <DependentUpon>Delete_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login_form.resx">
+      <DependentUpon>Login_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P_addPayroll_form.resx">
+      <DependentUpon>P_addPayroll_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DTR_search_form.resx">
+      <DependentUpon>DTR_search_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P_employeeList_form.resx">
+      <DependentUpon>P_employeeList_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payroll_report_form.resx">
+      <DependentUpon>Payroll_report_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="payrollsystemDataSet.xsc">
+      <DependentUpon>payrollsystemDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="payrollsystemDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>payrollsystemDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="payrollsystemDataSet.xss">
+      <DependentUpon>payrollsystemDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
