@@ -127,6 +127,5 @@ namespace PayrollSystem
 
             LoadListSum();
         }
-        protected System.Windows.Forms.ScrollBar HorizontalScrollBar { get; }
     }
 }

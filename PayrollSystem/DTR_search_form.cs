@@ -17,6 +17,7 @@ namespace PayrollSystem
         SqlConnection conn;
         SqlCommand cmd;
         SqlDataReader dr;
+        
 
         public DTR_search_form()
         {

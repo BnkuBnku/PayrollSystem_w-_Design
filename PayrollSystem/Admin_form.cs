@@ -19,14 +19,23 @@ namespace PayrollSystem
 
         private void button2_Click(object sender, EventArgs e)
         {
-            P_employeeList_form pp = new P_employeeList_form();
-            pp.Show();
+            var ppform = (P_employeeList_form)Application.OpenForms["P_employeeList_form"];
+            if(ppform == null)
+            {
+                P_employeeList_form pp = new P_employeeList_form();
+                pp.Show();
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            DTR_search_form dtr = new DTR_search_form();
-            dtr.Show();
+            var dtrform = (DTR_search_form)Application.OpenForms["DTR_search_form"];
+
+            if(dtrform == null)
+            {
+                DTR_search_form dtr = new DTR_search_form();
+                dtr.Show();
+            }
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -38,19 +47,24 @@ namespace PayrollSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
-            E_employeeList_form emp = new E_employeeList_form();
-            emp.Show();
+            var empform = (E_employeeList_form)Application.OpenForms["E_employeeList_form"];
+            
+            if (empform == null)
+            {
+                E_employeeList_form emp = new E_employeeList_form();
+                emp.Show();
+            }
         }
 
         private void P_reportButton_Click(object sender, EventArgs e)
         {
-            Payroll_report_form report = new Payroll_report_form();
-            report.Show();
-        }
+            var payform = (Payroll_report_form)Application.OpenForms["Payroll_report_form"];
 
-        private void Admin_form_Load(object sender, EventArgs e)
-        {
-
+            if (payform == null)
+            {
+                Payroll_report_form report = new Payroll_report_form();
+                report.Show();
+            }
         }
     }
 }

@@ -59,8 +59,12 @@ namespace PayrollSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
-            E_addemployee_form add = new E_addemployee_form();
-            add.Show();
+            var addform = (E_addemployee_form)Application.OpenForms["E_addemployee_form"];
+            if(addform == null)
+            {
+                E_addemployee_form add = new E_addemployee_form();
+                add.Show();
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -84,18 +88,26 @@ namespace PayrollSystem
             connect.getConnect();
             conn.Open();
 
-            E_updateEmployee upa = new E_updateEmployee();
+            var upform = (E_updateEmployee)Application.OpenForms["E_updateEmployee"];
+            if (upform == null)
+            {
+                E_updateEmployee upa = new E_updateEmployee();
 
-            upa.IDNO.Text = this.dataGridView1.CurrentRow.Cells[0].Value.ToString();
-            upa.tb_First.Text = this.dataGridView1.CurrentRow.Cells[1].Value.ToString();
-            upa.tB_Last.Text = this.dataGridView1.CurrentRow.Cells[2].Value.ToString();
-            upa.tB_age.Text = this.dataGridView1.CurrentRow.Cells[3].Value.ToString();
-            upa.tB_pos.Text = this.dataGridView1.CurrentRow.Cells[4].Value.ToString();
-            upa.tB_Bank.Text = this.dataGridView1.CurrentRow.Cells[5].Value.ToString();
-            upa.up_TBDeductType.Text = this.dataGridView1.CurrentRow.Cells[6].Value.ToString();
-            upa.up_rTBDescrip.Text = this.dataGridView1.CurrentRow.Cells[7].Value.ToString();
+                upa.IDNO.Text = this.dataGridView1.CurrentRow.Cells[0].Value.ToString();
+                upa.tb_First.Text = this.dataGridView1.CurrentRow.Cells[1].Value.ToString();
+                upa.tB_Last.Text = this.dataGridView1.CurrentRow.Cells[2].Value.ToString();
+                upa.tB_age.Text = this.dataGridView1.CurrentRow.Cells[3].Value.ToString();
+                upa.tB_pos.Text = this.dataGridView1.CurrentRow.Cells[4].Value.ToString();
+                upa.tB_Bank.Text = this.dataGridView1.CurrentRow.Cells[5].Value.ToString();
+                upa.up_TBDeductType.Text = this.dataGridView1.CurrentRow.Cells[6].Value.ToString();
+                upa.up_rTBDescrip.Text = this.dataGridView1.CurrentRow.Cells[7].Value.ToString();
 
-            upa.Show();
+                upa.Show();
+            }
+            else
+            {
+                MessageBox.Show("Update One At A Time");
+            }
 
             dr.Close();
             cmd.Dispose();
