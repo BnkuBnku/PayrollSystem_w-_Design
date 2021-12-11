@@ -101,12 +101,14 @@ namespace PayrollSystem
 
                     MessageBox.Show("Search Completed");
 
+                    //Calculate Total Work Hours
                     int tot = 0;
                     foreach (DataGridViewRow row in dataGridView1.Rows)
                     {
                         tot += Convert.ToInt32(row.Cells[5].Value);
                     }
 
+                    //Display TotalWorkHours
                     lb_total.Text = tot.ToString();
 
                     

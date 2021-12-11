@@ -32,15 +32,14 @@ namespace PayrollSystem
         private void button1_Click(object sender, EventArgs e)
         {
             if (String.IsNullOrEmpty(addE_tbFN.Text) || String.IsNullOrEmpty(addE_LN.Text) || String.IsNullOrEmpty(addE_age.Text) ||
-                String.IsNullOrEmpty(addE_bank.Text) || String.IsNullOrEmpty(addE_P.Text) || String.IsNullOrEmpty(add_rTBDescrip.Text) ||
+               String.IsNullOrEmpty(addE_P.Text) || String.IsNullOrEmpty(add_rTBDescrip.Text) ||
                 String.IsNullOrEmpty(add_TBDeductType.Text))
             {
                 MessageBox.Show("Please Fill Out The Form Completely");
             }
             else
             {
-                if (addE_bank.Text.Any(char.IsDigit) && addE_bank.Text.ToString().Length > 11)
-                {
+                
                     conn = connect.getConnect();
                     conn.Open();
 
@@ -95,11 +94,7 @@ namespace PayrollSystem
                             conn.Close();
                         }
                     }
-                }
-                else
-                {
-                    MessageBox.Show("PH Account number should be 12 digit.");
-                }
+                
             }
 
         }
